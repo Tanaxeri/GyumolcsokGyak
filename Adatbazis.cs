@@ -62,6 +62,8 @@ namespace GyumolcsokGyak
 
         }
 
+
+
         private bool kapcsolatNyit()
         {
 
@@ -85,6 +87,7 @@ namespace GyumolcsokGyak
 
             return true;
         }
+        
         private bool kapcsolatZar()
         {
 

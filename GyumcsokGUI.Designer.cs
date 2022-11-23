@@ -37,10 +37,14 @@
             this.IDText = new System.Windows.Forms.TextBox();
             this.GyumolcsNevText = new System.Windows.Forms.TextBox();
             this.MennyisegNumUp = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.EgysegArNumUp = new System.Windows.Forms.NumericUpDown();
+            this.KivalasztButton = new System.Windows.Forms.Button();
+            this.LetrehozButton = new System.Windows.Forms.Button();
+            this.ModositButton = new System.Windows.Forms.Button();
+            this.TorolButton = new System.Windows.Forms.Button();
             this.GyumolcsokBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MennyisegNumUp)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EgysegArNumUp)).BeginInit();
             this.SuspendLayout();
             // 
             // GyumolcsokList
@@ -55,7 +59,11 @@
             // GyumolcsokBox
             // 
             this.GyumolcsokBox.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.GyumolcsokBox.Controls.Add(this.numericUpDown1);
+            this.GyumolcsokBox.Controls.Add(this.TorolButton);
+            this.GyumolcsokBox.Controls.Add(this.ModositButton);
+            this.GyumolcsokBox.Controls.Add(this.LetrehozButton);
+            this.GyumolcsokBox.Controls.Add(this.KivalasztButton);
+            this.GyumolcsokBox.Controls.Add(this.EgysegArNumUp);
             this.GyumolcsokBox.Controls.Add(this.MennyisegNumUp);
             this.GyumolcsokBox.Controls.Add(this.GyumolcsNevText);
             this.GyumolcsokBox.Controls.Add(this.IDText);
@@ -127,19 +135,64 @@
             // 
             this.MennyisegNumUp.DecimalPlaces = 2;
             this.MennyisegNumUp.Location = new System.Drawing.Point(134, 132);
+            this.MennyisegNumUp.Maximum = new decimal(new int[] {
+            400,
+            0,
+            0,
+            0});
             this.MennyisegNumUp.Name = "MennyisegNumUp";
             this.MennyisegNumUp.Size = new System.Drawing.Size(120, 26);
             this.MennyisegNumUp.TabIndex = 6;
             this.MennyisegNumUp.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // numericUpDown1
+            // EgysegArNumUp
             // 
-            this.numericUpDown1.DecimalPlaces = 2;
-            this.numericUpDown1.Location = new System.Drawing.Point(134, 176);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 26);
-            this.numericUpDown1.TabIndex = 7;
-            this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.EgysegArNumUp.DecimalPlaces = 2;
+            this.EgysegArNumUp.Location = new System.Drawing.Point(134, 176);
+            this.EgysegArNumUp.Name = "EgysegArNumUp";
+            this.EgysegArNumUp.Size = new System.Drawing.Size(120, 26);
+            this.EgysegArNumUp.TabIndex = 7;
+            this.EgysegArNumUp.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // KivalasztButton
+            // 
+            this.KivalasztButton.Location = new System.Drawing.Point(12, 394);
+            this.KivalasztButton.Name = "KivalasztButton";
+            this.KivalasztButton.Size = new System.Drawing.Size(106, 44);
+            this.KivalasztButton.TabIndex = 2;
+            this.KivalasztButton.Text = "Kiválaszt";
+            this.KivalasztButton.UseVisualStyleBackColor = true;
+            this.KivalasztButton.Click += new System.EventHandler(this.KivalasztButton_Click);
+            // 
+            // LetrehozButton
+            // 
+            this.LetrehozButton.Location = new System.Drawing.Point(16, 249);
+            this.LetrehozButton.Name = "LetrehozButton";
+            this.LetrehozButton.Size = new System.Drawing.Size(120, 40);
+            this.LetrehozButton.TabIndex = 8;
+            this.LetrehozButton.Text = "Létrehozás";
+            this.LetrehozButton.UseVisualStyleBackColor = true;
+            this.LetrehozButton.Click += new System.EventHandler(this.LetrehozButton_Click);
+            // 
+            // ModositButton
+            // 
+            this.ModositButton.Location = new System.Drawing.Point(167, 249);
+            this.ModositButton.Name = "ModositButton";
+            this.ModositButton.Size = new System.Drawing.Size(121, 37);
+            this.ModositButton.TabIndex = 9;
+            this.ModositButton.Text = "Módosítás";
+            this.ModositButton.UseVisualStyleBackColor = true;
+            this.ModositButton.Click += new System.EventHandler(this.ModositButton_Click);
+            // 
+            // TorolButton
+            // 
+            this.TorolButton.Location = new System.Drawing.Point(340, 249);
+            this.TorolButton.Name = "TorolButton";
+            this.TorolButton.Size = new System.Drawing.Size(119, 40);
+            this.TorolButton.TabIndex = 10;
+            this.TorolButton.Text = "Törlés";
+            this.TorolButton.UseVisualStyleBackColor = true;
+            this.TorolButton.Click += new System.EventHandler(this.TorolButton_Click);
             // 
             // GyumcsokGUI
             // 
@@ -154,7 +207,7 @@
             this.GyumolcsokBox.ResumeLayout(false);
             this.GyumolcsokBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MennyisegNumUp)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EgysegArNumUp)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -170,7 +223,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown EgysegArNumUp;
+        private System.Windows.Forms.Button KivalasztButton;
+        private System.Windows.Forms.Button TorolButton;
+        private System.Windows.Forms.Button ModositButton;
+        private System.Windows.Forms.Button LetrehozButton;
     }
 }
 
